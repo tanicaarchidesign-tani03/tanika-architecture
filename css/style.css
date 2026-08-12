@@ -370,6 +370,7 @@ input,textarea,select{font-family:inherit;}
 }
 
 @media (max-width:720px){
+  .br-pc{display:none;}
   .map-embed iframe{height:300px;}
   .main-nav{
     position:fixed;inset:0;z-index:550;
