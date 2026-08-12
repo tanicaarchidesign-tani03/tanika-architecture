@@ -369,6 +369,10 @@ input,textarea,select{font-family:inherit;}
   .contact-info{grid-template-columns:1fr;gap:26px;}
 }
 
+@media (max-width:600px){
+  .about-lead{font-size:3.8vw;letter-spacing:.01em;white-space:nowrap;}
+}
+
 @media (max-width:720px){
   .br-pc{display:none;}
   .map-embed iframe{height:300px;}
