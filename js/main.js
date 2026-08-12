@@ -40,6 +40,17 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
 revealEls.forEach(el => io.observe(el));
 
+// before/after toggle: hover in/out on mouse, tap to toggle on touch
+const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+document.querySelectorAll('.work-card-ba').forEach(card => {
+  if (supportsHover) {
+    card.addEventListener('mouseenter', () => card.classList.add('is-after'));
+    card.addEventListener('mouseleave', () => card.classList.remove('is-after'));
+  } else {
+    card.addEventListener('click', () => card.classList.toggle('is-after'));
+  }
+});
+
 // contact form (static demo submission)
 const form = document.getElementById('contactForm');
 const note = document.getElementById('formNote');
