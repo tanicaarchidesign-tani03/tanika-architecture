@@ -51,13 +51,32 @@ document.querySelectorAll('.work-card-ba').forEach(card => {
   }
 });
 
-// contact form (static demo submission)
+// contact form (Web3Forms submission)
 const form = document.getElementById('contactForm');
 if (form) {
   const note = document.getElementById('formNote');
-  form.addEventListener('submit', (e) => {
+  const submitBtn = form.querySelector('.submit-btn');
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    note.textContent = 'お問い合わせありがとうございます。担当者より折り返しご連絡いたします。';
-    form.reset();
+    submitBtn.disabled = true;
+    note.textContent = '送信しています…';
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      });
+      const result = await res.json();
+      if (result.success) {
+        note.textContent = 'お問い合わせありがとうございます。担当者より折り返しご連絡いたします。';
+        form.reset();
+      } else {
+        note.textContent = '送信に失敗しました。お手数ですが、お電話またはメールにて直接ご連絡ください。';
+      }
+    } catch (err) {
+      note.textContent = '送信に失敗しました。お手数ですが、お電話またはメールにて直接ご連絡ください。';
+    } finally {
+      submitBtn.disabled = false;
+    }
   });
 }

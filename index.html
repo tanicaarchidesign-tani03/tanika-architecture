@@ -301,7 +301,11 @@
         設計のご依頼でなくとも、土地探しの段階からのご相談も承っております。
       </p>
 
-      <form class="contact-form" id="contactForm">
+      <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="88c07643-27ec-4aa5-b59e-4f5a45dfab9e">
+        <input type="hidden" name="subject" value="【タニカ建築HP】お問い合わせがありました">
+        <input type="hidden" name="from_name" value="タニカ建築HP お問い合わせフォーム">
+        <input type="checkbox" name="botcheck" class="hidden-field" style="display:none">
         <div class="form-row">
           <label>
             <span>お名前<em>*</em></span>
