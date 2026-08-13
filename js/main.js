@@ -55,6 +55,7 @@ document.querySelectorAll('.work-card-ba').forEach(card => {
 const form = document.getElementById('contactForm');
 if (form) {
   const note = document.getElementById('formNote');
+  const success = document.getElementById('formSuccess');
   const submitBtn = form.querySelector('.submit-btn');
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -68,14 +69,16 @@ if (form) {
       });
       const result = await res.json();
       if (result.success) {
-        note.textContent = 'お問い合わせありがとうございます。担当者より折り返しご連絡いたします。';
         form.reset();
+        form.hidden = true;
+        success.hidden = false;
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
       } else {
         note.textContent = '送信に失敗しました。お手数ですが、お電話またはメールにて直接ご連絡ください。';
+        submitBtn.disabled = false;
       }
     } catch (err) {
       note.textContent = '送信に失敗しました。お手数ですが、お電話またはメールにて直接ご連絡ください。';
-    } finally {
       submitBtn.disabled = false;
     }
   });
