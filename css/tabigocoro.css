@@ -1,0 +1,48 @@
+/* ---------- TABIGOCORO page ---------- */
+
+.tg-wordmark{
+  width:clamp(220px,32vw,420px);
+  height:auto;
+  margin:0 0 22px;
+  transition-delay:.15s;
+}
+
+.tg-cta-logo{
+  width:clamp(150px,18vw,220px);
+  height:auto;
+  margin:0 auto 28px;
+}
+
+.tg-quote{
+  padding:120px 5vw;
+}
+.tg-quote .intro-inner{
+  font-size:clamp(20px,2.6vw,30px);
+  line-height:1.9;
+}
+
+.tg-concept{padding:150px 0;}
+.tg-concept-grid{padding:0 5vw;}
+.tg-frame{aspect-ratio:3/4;}
+
+.tg-gallery{padding:0 0 150px;background:var(--bg-alt);}
+.tg-gallery-lead{
+  padding:0 5vw;margin:-40px 0 60px;
+  font-family:var(--serif);font-size:14px;letter-spacing:.08em;color:var(--ink-soft);
+  transition-delay:.1s;
+}
+.tg-gallery-grid{padding:0 5vw;}
+
+.tg-pillars-section{padding:150px 0;}
+.tg-pillars{margin-top:70px;}
+
+.tg-cta{padding-top:150px;}
+.tg-cta-btn{margin-bottom:26px;}
+.tg-back-link{color:var(--ink-soft);border-bottom-color:var(--line);}
+
+@media (max-width:720px){
+  .tg-quote{padding:90px 5vw;}
+  .tg-concept{padding-bottom:100px;}
+  .tg-gallery{padding-bottom:100px;}
+  .tg-pillars-section{padding:100px 0;}
+}

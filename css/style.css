@@ -195,6 +195,7 @@ input,textarea,select{font-family:inherit;}
 .pillar-num{font-family:var(--serif);font-size:13px;color:var(--accent);}
 .pillar h3{font-family:var(--serif);font-size:19px;margin:16px 0 14px;letter-spacing:.05em;}
 .pillar p{font-size:13px;color:var(--ink-soft);line-height:1.95;}
+.pillar-link{display:inline-block;margin-top:22px;font-size:12px;letter-spacing:.1em;border-bottom:1px solid var(--ink);padding-bottom:3px;}
 
 /* ---------- works ---------- */
 .works{padding:140px 0;background:var(--bg-alt);}

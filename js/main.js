@@ -53,9 +53,11 @@ document.querySelectorAll('.work-card-ba').forEach(card => {
 
 // contact form (static demo submission)
 const form = document.getElementById('contactForm');
-const note = document.getElementById('formNote');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  note.textContent = 'お問い合わせありがとうございます。担当者より折り返しご連絡いたします。';
-  form.reset();
-});
+if (form) {
+  const note = document.getElementById('formNote');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    note.textContent = 'お問い合わせありがとうございます。担当者より折り返しご連絡いたします。';
+    form.reset();
+  });
+}
