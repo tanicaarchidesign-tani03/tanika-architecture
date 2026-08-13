@@ -225,6 +225,12 @@ input,textarea,select{font-family:inherit;}
   border-bottom:1px solid var(--line);padding-bottom:3px;
 }
 .instagram-feed{padding:0 5vw;}
+.instagram-feed a[href*="elfsight"]{
+  transform:scale(.75);
+  transform-origin:center;
+  opacity:.45;
+  filter:grayscale(1);
+}
 
 /* ---------- works ---------- */
 .works{padding:140px 0;background:var(--bg-alt);}
