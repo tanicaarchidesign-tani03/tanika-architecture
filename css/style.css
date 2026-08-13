@@ -103,6 +103,21 @@ input,textarea,select{font-family:inherit;}
 .menu-btn{display:none;flex-direction:column;gap:5px;width:26px;z-index:600;}
 .menu-btn span{display:block;height:1px;background:var(--ink);transition:transform .3s ease, opacity .3s ease;}
 
+/* ---------- fixed contact tab ---------- */
+.fixed-contact-tab{
+  position:fixed;top:50%;right:0;z-index:490;
+  writing-mode:vertical-rl;
+  padding:26px 12px;
+  background:var(--ink);color:var(--dark-ink);
+  font-size:12px;letter-spacing:.2em;
+  transform:translateY(-50%);
+  transition:padding .3s ease, background .3s ease;
+}
+.fixed-contact-tab:hover{padding-right:18px;background:var(--accent);}
+@media (max-width:720px){
+  .fixed-contact-tab{padding:20px 8px;font-size:11px;}
+}
+
 /* ---------- hero ---------- */
 .hero{
   position:relative;
@@ -196,6 +211,20 @@ input,textarea,select{font-family:inherit;}
 .pillar h3{font-family:var(--serif);font-size:19px;margin:16px 0 14px;letter-spacing:.05em;}
 .pillar p{font-size:13px;color:var(--ink-soft);line-height:1.95;}
 .pillar-link{display:inline-block;margin-top:22px;font-size:12px;letter-spacing:.1em;border-bottom:1px solid var(--ink);padding-bottom:3px;}
+
+/* ---------- instagram ---------- */
+.instagram{padding:0 0 150px;}
+.instagram-head{
+  display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;
+  padding:0 5vw;margin-bottom:50px;
+}
+.instagram-logo{font-family:var(--serif);font-size:clamp(24px,3vw,34px);font-weight:600;letter-spacing:.06em;}
+.instagram-handle{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;letter-spacing:.05em;color:var(--ink-soft);
+  border-bottom:1px solid var(--line);padding-bottom:3px;
+}
+.instagram-feed{padding:0 5vw;}
 
 /* ---------- works ---------- */
 .works{padding:140px 0;background:var(--bg-alt);}
