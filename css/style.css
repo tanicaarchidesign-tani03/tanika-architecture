@@ -226,11 +226,13 @@ input,textarea,select{font-family:inherit;}
 }
 .instagram-feed{padding:0 5vw;}
 .instagram-feed a[href*="elfsight"]{
-  transform:scale(.75);
+  transform:scale(.45);
   transform-origin:center;
-  opacity:.45;
+  opacity:.16;
   filter:grayscale(1);
+  transition:opacity .3s ease;
 }
+.instagram-feed a[href*="elfsight"]:hover{opacity:.5;}
 
 /* ---------- works ---------- */
 .works{padding:140px 0;background:var(--bg-alt);}
